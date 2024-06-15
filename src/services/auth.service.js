@@ -1,6 +1,11 @@
 const { genSaltSync, hashSync } = require('bcrypt');
 const UserModel = require("../models/User");
 
+/** TODO: TryCatch para las consultas de DB */
+/** TODO: /home/jcarlosj/Learning/bit/bit-ecommerce/ecommerce-backend/src/controllers/auth.controller.js:52
+        userFound.password      // Password encriptado que viene de la DB 
+*/
+
 function registerUser( newUser ) {
     // 1. Paso: Preguntar si el usuario existe o no
     const dbUser = new UserModel( newUser );        // Contra la DB
